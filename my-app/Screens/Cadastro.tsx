@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Text, Alert } from 'react-native';
+import { View, StyleSheet, Alert } from 'react-native';
 import Status from '../components/StatusBar';
 import Inputs from '../components/Input';
 import Botao from '../components/Button';

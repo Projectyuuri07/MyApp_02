@@ -23,7 +23,8 @@ const styles = StyleSheet.create({
   },
   texto: {
     color: 'white',
-    fontSize: 19,
+    fontSize: 20,
+    padding: 5,
   },
 });
 

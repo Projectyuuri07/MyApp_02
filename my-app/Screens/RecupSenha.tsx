@@ -1,11 +1,11 @@
-import { View, StyleSheet, Alert, Text } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 import Status from '../components/StatusBar';
 import Inputs from '../components/Input';
 import Botao from '../components/Button';
 
 const RecupSenha = () => {
     const BotaoPress = () => {
-        Alert.alert('E-mail enviado com sucesso! Aguarde para a recuparação da senha!');
+        alert('E-mail enviado com sucesso! Aguarde para a recuparação da senha!');
     };
     
     return (
@@ -30,7 +30,7 @@ const RecupSenha = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'blue',
+        backgroundColor: '#011E83',
         alignItems: 'center',
         justifyContent: 'center',
     },

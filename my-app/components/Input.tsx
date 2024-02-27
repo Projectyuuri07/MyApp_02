@@ -1,15 +1,15 @@
 import React from "react";
 import { View, TextInput, StyleSheet, Text } from 'react-native';
 
-
-const Inputs = ({ placeholder, secureTextEntry, title }) => {
+const Inputs = ({ placeholder, secureTextEntry, title }: { placeholder: string, secureTextEntry: boolean, title: string }) => {
     return (
         <View style={styles.container}>
             <Text style={styles.textoinp}>{title}</Text>
-            <TextInput style={styles.input} placeholder={placeholder} placeholderTextColor="#808080" secureTextEntry={secureTextEntry}/>
+            <TextInput style={styles.input} placeholder={placeholder} placeholderTextColor="#808080" secureTextEntry={secureTextEntry} />
         </View>
     );
-};
+}
+
 
 const styles = StyleSheet.create({
     container: {
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
         color: 'black',
         fontWeight: 'bold',
         margin: 5,
-      },
+    },
 });
 
 export default Inputs;

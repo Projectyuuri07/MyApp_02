@@ -1,7 +1,13 @@
 import React from "react";
 import { View, TextInput, StyleSheet, Text } from 'react-native';
 
-const Inputs = ({ placeholder, secureTextEntry, title }) => {
+type Props = {
+    placeholder: string,
+    secureTextEntry: boolean,
+    title: string,
+};
+
+const Inputs = ({ placeholder, secureTextEntry, title } : Props) => {
     return (
         <View style={styles.container}>
             <Text style={styles.textoinp}>{title}</Text>

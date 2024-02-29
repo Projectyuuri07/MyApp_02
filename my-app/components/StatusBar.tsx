@@ -2,7 +2,11 @@ import React from 'react';
 import { View, Image, Text, StyleSheet } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
-const Status = ({ title }) => {
+type Props = {
+  title: string;
+};
+
+const Status = ({ title }: Props) => {
   return (
     <View style={styles.container}>
       <Image source={require('../assets/Logo.png')} style={styles.image} />

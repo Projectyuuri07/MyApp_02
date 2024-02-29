@@ -5,7 +5,7 @@ import RecupSenha from './Screens/RecupSenha';
 
 const App = () => {
   return (
-    <Cadastro />
+    <Login/>
   )
 }
 

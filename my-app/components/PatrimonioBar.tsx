@@ -3,55 +3,35 @@ import { View, StyleSheet, TouchableOpacity, Text } from "react-native";
 import { StatusBar } from 'expo-status-bar';
 import { Entypo, Foundation} from '@expo/vector-icons';
 
-type PatrimonioBarProps = {
-    title: string;
-};
+type TextInputProps = {
+    color: string
+}
 
-const PatrimonioBar = ({ title }: PatrimonioBarProps) => {
-
-    const Lista = () => {
-        alert('Lista ainda está em desenvolvimento!');
-    }
-
-    const Pesquisa = () => {
-        alert('Pesquisa ainda está em desenvolvimento!');
-    }
-
+const PatriBar = ({children}: any) => {
     return (
-        <View style={styles.container}>
-            <StatusBar style="light" backgroundColor="#333" />
-            
-            <View style={styles.displaytop}>
-                <Foundation name="list" size={30} color="#595959" onPress={Lista} />
-
-                <Text style={styles.texto}>{title}</Text>
-
-                <TouchableOpacity>
-                    <Entypo name="magnifying-glass" size={30} color="#595959" onPress={Pesquisa} />
-                </TouchableOpacity>
-            </View>
+        <View style={[styles.container]}>
+            <StatusBar backgroundColor="black"/>
+            <View style={styles.separar}>{children}</View>
         </View>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: '100%',
-        height: 120,
+        height: 60,
+        width: "100%",
+        marginTop: 30,
+        borderBottomWidth: 1,
+        borderBottomColor: "#F5F5F5",
+        padding: 8,
+        justifyContent: "center"
     },
-    displaytop: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        width: 360,
-        padding: 10,
-    },
-    texto: {
-        color: 'black',
-        fontSize: 20,
-        padding: 5,
-    },
+    separar: {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        margin: 10        
+    }
 });
 
-export default PatrimonioBar;
+export default PatriBar;

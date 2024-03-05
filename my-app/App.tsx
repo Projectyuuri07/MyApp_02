@@ -6,7 +6,7 @@ import Patrimonio from './Screens/Patrimonio';
 
 const App = () => {
   return (
-    <RecupSenha />
+    <Patrimonio />
   )
 }
 

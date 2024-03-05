@@ -1,11 +1,6 @@
 import React from "react";
-import { View, StyleSheet, TouchableOpacity, Text } from "react-native";
+import { View, StyleSheet} from "react-native";
 import { StatusBar } from 'expo-status-bar';
-import { Entypo, Foundation} from '@expo/vector-icons';
-
-type TextInputProps = {
-    color: string
-}
 
 const PatriBar = ({children}: any) => {
     return (

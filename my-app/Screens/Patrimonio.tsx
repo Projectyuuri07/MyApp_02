@@ -15,15 +15,15 @@ const Patrimonio = () => {
     return(
         <View style={styles.container}>
 
-                        <PatriBar>
-                        <TouchableOpacity>
-                                <Octicons name="three-bars" size={24} color="black" />
-                            </TouchableOpacity>
-                            <Text>Lista</Text>
-                            <TouchableOpacity>
-                                <Feather name="search" size={24} color="black" />
-                            </TouchableOpacity>
-                        </PatriBar>
+            <PatriBar>
+                <TouchableOpacity>
+                    <Octicons name="three-bars" size={24} color="black" />
+                </TouchableOpacity>
+                    <Text>Lista</Text>
+                <TouchableOpacity>
+                    <Feather name="search" size={24} color="black" />
+                </TouchableOpacity>
+            </PatriBar>
 
             <ScrollView>
                 <Itens id={956389} item={'CADEIRA SENAI'} />

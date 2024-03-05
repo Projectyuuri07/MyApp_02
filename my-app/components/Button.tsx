@@ -1,12 +1,12 @@
 import React from 'react';
-import { View, TouchableOpacity, Text, StyleSheet, GestureResponderEvent } from 'react-native';
+import { View, TouchableOpacity, Text, StyleSheet} from 'react-native';
 
 type Props = {
   label: string;
-  onPress: (event: GestureResponderEvent) => void;
+  onPress: () => void;
 };
 
-const Botao = ({label , onPress }: Props) => {
+const Botao = ({ label, onPress }: Props) => {
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.button} onPress={onPress}>

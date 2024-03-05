@@ -13,7 +13,7 @@ const Patrimonio = () => {
 
     return(
         <View style={styles.container}>
-            <PatrimonioBar />
+            <PatrimonioBar title="Lista" />
 
             <ScrollView>
                 <Itens id={956389} item={'CADEIRA SENAI'} />
@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
+
     },
     display: {
         width: "100%",

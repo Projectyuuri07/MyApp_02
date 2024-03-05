@@ -25,9 +25,9 @@ const Login = () => {
 
                 <Text style={styles.texto}>Faça Login para Acessar o Sistema!</Text>
 
-                <Inputs placeholder="Insira seu email:" secureTextEntry={false} title="E-mail:"/>
-        
-                <Inputs placeholder="Insira sua senha:" secureTextEntry={true} title="Senha:"/>
+                <Inputs placeholder="Insira seu email:" title="E-mail:"/>
+                
+                <Inputs placeholder="Insira sua senha:" secureTextEntry title="Senha:"/>
         
                 <Botao label="Cadastre-se" onPress={BotaoPress} />
 

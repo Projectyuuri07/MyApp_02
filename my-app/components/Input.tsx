@@ -1,17 +1,15 @@
 import React from "react";
-import { View, TextInput, StyleSheet, Text } from 'react-native';
+import { View, TextInput, StyleSheet, Text, TextInputProps } from 'react-native';
 
-type Props = {
-    placeholder: string,
-    secureTextEntry: boolean,
+interface InputProps extends TextInputProps{
     title: string,
-};
+}
 
-const Inputs = ({ placeholder, secureTextEntry, title } : Props) => {
+const Inputs = ({ title, ...props}: InputProps) => {
     return (
         <View style={styles.container}>
             <Text style={styles.textoinp}>{title}</Text>
-            <TextInput style={styles.input} placeholder={placeholder} placeholderTextColor="#808080" secureTextEntry={secureTextEntry} />
+            <TextInput {...props} style={styles.input} placeholderTextColor="#808080" />
         </View>
     );
 }

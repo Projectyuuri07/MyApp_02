@@ -16,17 +16,17 @@ const Cadastro = () => {
 
       <View style={styles.cadastro}>
         
-        <Inputs placeholder="insira seu nome: " secureTextEntry={false} title="Nome:"/>
+        <Inputs placeholder="insira seu nome: " title="Nome:"/>
 
-        <Inputs placeholder="insira seu sobrenome: " secureTextEntry={false} title="Sobrenome:" />
+        <Inputs placeholder="insira seu sobrenome: " title="Sobrenome:" />
 
-        <Inputs placeholder="insira seu email:" secureTextEntry={false} title="E-mail:"/>
+        <Inputs placeholder="insira seu email:" title="E-mail:"/>
 
-        <Inputs placeholder="insira seu telefone:" secureTextEntry={false} title="Telefone"/>
+        <Inputs placeholder="insira seu telefone:" title="Telefone"/>
 
-        <Inputs placeholder="insira sua senha:" secureTextEntry={true} title="Senha:"/>
+        <Inputs placeholder="insira sua senha:" secureTextEntry title="Senha:"/>
 
-        <Inputs placeholder="insira sua senha novamente:" secureTextEntry={true} title="Confirmar senha:"/>
+        <Inputs placeholder="insira sua senha novamente:" secureTextEntry title="Confirmar senha:"/>
 
         <Botao label="Cadastre-se" onPress={BotaoPress} />
 

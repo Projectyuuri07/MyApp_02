@@ -17,7 +17,7 @@ const RecupSenha = () => {
 
                 <Text style={styles.texto}>Insira seu e-mail para recuperar a senha!</Text>
                 
-                <Inputs placeholder="insira seu email:" secureTextEntry={false} title="E-mail:"/>
+                <Inputs placeholder="insira seu email:" title="E-mail:"/>
         
                 <Botao label="Cadastre-se" onPress={BotaoPress} />
         

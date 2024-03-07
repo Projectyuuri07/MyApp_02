@@ -1,11 +1,11 @@
 import React from "react";
 import { View, StyleSheet, TouchableOpacity, Text} from "react-native";
 import PatriBar from "../components/PatrimonioBar";
-import {AntDesign } from '@expo/vector-icons';
+import {AntDesign, MaterialIcons, Ionicons  } from '@expo/vector-icons';
 import Footbar from "../components/Footer";
-import InputinventoryInput from "../components/Inputitens";
 
-const AddIten = () => {
+
+const Descricao = () => {
     return(
         <View style={styles.container}>
 
@@ -13,24 +13,14 @@ const AddIten = () => {
                 <TouchableOpacity>
                     <AntDesign name="arrowleft" size={24} color="#ffff" />
                 </TouchableOpacity>
-                    <Text style={styles.text}>Cadastro de itens</Text>
+                    <Text style={styles.text}>Scanner</Text>
                 <TouchableOpacity>
-                    <AntDesign name="pluscircleo" size={24} color="#ffff" />
+                    <Ionicons name="reload-outline" size={24} color="#ffff" />
                 </TouchableOpacity>
             </PatriBar>
 
-            <View style={styles.inputContainer}>
-
-            <InputinventoryInput label="N° Inventario"/>
-
-            <InputinventoryInput label="Descrição"/>
-
-            <InputinventoryInput label="Local"/>
-
-            <InputinventoryInput label="Responsável"/>
-
-            <InputinventoryInput label="Data de registro"/>
-
+            <View style={styles.corpo}>
+                <MaterialIcons name="qr-code-scanner" size={350} color="#5D5C5C" />
             </View>
 
             <Footbar color="white" ColorIcon="#595959" margem={1} />
@@ -46,11 +36,19 @@ const styles = StyleSheet.create({
     text: {
         color: "#ffff",
     },
-    inputContainer: {
-        flex: 1,
-        marginTop: 50,
-
+    corpo: {
+        alignItems: "center",
+        paddingTop: 150,
     },
+    addButtonContainer: {
+        position: "absolute",
+        bottom: 20,
+        right: 0,
+        margin: 20,
+        marginBottom: 50,
+        height: 60,
+    },
+    
 });
 
-export default AddIten;
+export default Descricao;

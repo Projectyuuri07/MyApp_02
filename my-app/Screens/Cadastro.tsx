@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet} from 'react-native';
+import { View, StyleSheet, ScrollView} from 'react-native';
 import Status from '../components/StatusBar';
 import Inputs from '../components/Input';
 import Botao from '../components/Button';
@@ -14,7 +14,7 @@ const Cadastro = () => {
 
       <Status title="Cadastre-se" />
 
-      <View style={styles.cadastro}>
+      <ScrollView style={styles.cadastro}>
         
         <Inputs placeholder="insira seu nome: " title="Nome:"/>
 
@@ -30,7 +30,7 @@ const Cadastro = () => {
 
         <Botao label="Cadastre-se" onPress={BotaoPress} />
 
-      </View>
+      </ScrollView>
 
     </View>
   );

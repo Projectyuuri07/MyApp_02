@@ -6,7 +6,23 @@ type Props = {
   title: string;
 };
 
-const Status = ({ title }: Props) => {
+export default function Status ({ title }: Props){
+  const styles = StyleSheet.create({
+    container: {
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: 60,
+    },
+    image: {
+      resizeMode: 'contain',
+    },
+    texto: {
+      color: 'white',
+      fontSize: 20,
+      padding: 5,
+    },
+  });
+  
   return (
     <View style={styles.container}>
       <Image source={require('../assets/Logo.png')} style={styles.image} />
@@ -16,20 +32,5 @@ const Status = ({ title }: Props) => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 60,
-  },
-  image: {
-    resizeMode: 'contain',
-  },
-  texto: {
-    color: 'white',
-    fontSize: 20,
-    padding: 5,
-  },
-});
 
-export default Status;
+

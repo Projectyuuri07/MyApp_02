@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { View, TextInput, StyleSheet, Text } from 'react-native';
+import { View, TextInput, StyleSheet, Text, TextInputProps } from 'react-native';
 
-interface InventoryInputProps {
+interface InventoryInputProps extends TextInputProps{
     label: string,
 }
 

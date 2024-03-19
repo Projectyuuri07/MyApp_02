@@ -1,35 +1,35 @@
 import React from "react";
 import { View, StyleSheet, TouchableOpacity, Text} from "react-native";
 import PatriBar from "../components/PatrimonioBar";
-import {AntDesign } from '@expo/vector-icons';
+import {AntDesign, MaterialIcons } from '@expo/vector-icons';
 import Footbar from "../components/Footer";
 import InputinventoryInput from "../components/Inputitens";
 
-const AddIten = () => {
+const Editar = () => {
     return(
         <View style={styles.container}>
 
             <PatriBar color="red">
                 <TouchableOpacity>
-                    <AntDesign name="arrowleft" size={24} color="#ffff" />
+                    <AntDesign name="arrowleft" size={25} color="#ffff" />
                 </TouchableOpacity>
-                    <Text style={styles.text}>Cadastro de itens</Text>
+                    <Text style={styles.text}>Editar</Text>
                 <TouchableOpacity>
-                    <AntDesign name="pluscircleo" size={24} color="#ffff" />
+                    <MaterialIcons name="check-circle" size={25} color="#ffff" />
                 </TouchableOpacity>
             </PatriBar>
 
             <View style={styles.inputContainer}>
 
-            <InputinventoryInput label="N° Inventario"/>
+            <InputinventoryInput label="N° Inventario" placeholder="957689"/>
 
-            <InputinventoryInput label="Descrição"/>
+            <InputinventoryInput label="Descrição" placeholder="CADEIRA GIRATÓRIA"/>
 
-            <InputinventoryInput label="Local"/>
+            <InputinventoryInput label="Local" placeholder="SALA C13"/>
 
-            <InputinventoryInput label="Responsável"/>
+            <InputinventoryInput label="Responsável" placeholder="CARLOS"/>
 
-            <InputinventoryInput label="Data de registro"/>
+            <InputinventoryInput label="Data de registro" placeholder="05/03/2024"/>
 
             </View>
 
@@ -46,7 +46,6 @@ const styles = StyleSheet.create({
     text: {
         color: "#ffff",
         fontSize: 16,
-
     },
     inputContainer: {
         flex: 1,
@@ -55,4 +54,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default AddIten;
+export default Editar;

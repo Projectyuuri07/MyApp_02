@@ -14,7 +14,7 @@ const Patrimonio = () => {
                 <TouchableOpacity>
                     <Octicons name="three-bars" size={24} color="black" />
                 </TouchableOpacity>
-                    <Text>Lista</Text>
+                    <Text style={styles.text}>Lista</Text>
                 <TouchableOpacity>
                     <Feather name="search" size={24} color="black" />
                 </TouchableOpacity>
@@ -67,6 +67,10 @@ const styles = StyleSheet.create({
         marginBottom: 50,
         height: 60,
     },
+    text: {
+        color: "#000",
+        fontSize: 16,
+    }, 
 });
     
 export default Patrimonio;

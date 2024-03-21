@@ -12,7 +12,7 @@ export default function Input({ title, ...props }: InputProps) {
             margin: 8,
         },
         input: {
-            height: 40,
+            height: 38,
             width: 350,
             backgroundColor: '#f5f5f5',
             borderRadius: 5,

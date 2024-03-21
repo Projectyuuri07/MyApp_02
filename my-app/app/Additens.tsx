@@ -4,6 +4,7 @@ import PatriBar from "../components/PatrimonioBar";
 import {AntDesign } from '@expo/vector-icons';
 import Footbar from "../components/Footer";
 import InputinventoryInput from "../components/Inputitens";
+import { Link } from "expo-router";
 
 const AddIten = () => {
     return(
@@ -11,7 +12,9 @@ const AddIten = () => {
 
             <PatriBar color="red">
                 <TouchableOpacity>
-                    <AntDesign name="arrowleft" size={24} color="#ffff" />
+                    <Link href="/Patrimonio" asChild>
+                        <AntDesign name="arrowleft" size={24} color="#ffff" />
+                    </Link>
                 </TouchableOpacity>
                     <Text style={styles.text}>Cadastro de itens</Text>
                 <TouchableOpacity>
@@ -31,7 +34,7 @@ const AddIten = () => {
 
             <InputinventoryInput label="Data de registro"/>
 
-            </View>
+            </View>  
 
             <Footbar color="white" ColorIcon="#595959" margem={1} />
 
@@ -51,7 +54,14 @@ const styles = StyleSheet.create({
     inputContainer: {
         flex: 1,
         marginTop: 50,
-
+    },
+    addButtonContainer: {
+        position: "absolute",
+        bottom: 20,
+        right: 0,
+        margin: 20,
+        marginBottom: 50,
+        height: 60,
     },
 });
 

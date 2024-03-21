@@ -1,3 +1,4 @@
+import { Link } from "expo-router";
 import React from "react";
 import {Text, View, StyleSheet } from "react-native";
 
@@ -34,8 +35,10 @@ export default function Itens({id, item }: Props){
     });
     return(
         <View style={styles.display}>
-            <Text style={styles.text}>{id}</Text>
-            <Text style={styles.item}>{item}</Text>
+            <Link href="/DescricaoIten" asChild>
+                <Text style={styles.text}>{id}</Text>
+            </Link>
+                <Text style={styles.item}>{item}</Text>
         </View>
     );
 };

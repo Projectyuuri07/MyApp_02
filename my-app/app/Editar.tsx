@@ -4,6 +4,7 @@ import PatriBar from "../components/PatrimonioBar";
 import {AntDesign, MaterialIcons } from '@expo/vector-icons';
 import Footbar from "../components/Footer";
 import InputinventoryInput from "../components/Inputitens";
+import { Link } from "expo-router";
 
 const Editar = () => {
     return(
@@ -11,7 +12,9 @@ const Editar = () => {
 
             <PatriBar color="red">
                 <TouchableOpacity>
-                    <AntDesign name="arrowleft" size={25} color="#ffff" />
+                    <Link href="/DescricaoIten" asChild>
+                        <AntDesign name="arrowleft" size={25} color="#ffff" />
+                    </Link>
                 </TouchableOpacity>
                     <Text style={styles.text}>Editar</Text>
                 <TouchableOpacity>

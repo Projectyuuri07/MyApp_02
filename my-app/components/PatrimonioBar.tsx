@@ -12,7 +12,6 @@ export default function PatriBar({children, color}: Props){
         container: {
             height: 70,
             width: "100%",
-            marginTop: 20,
             borderBottomColor: "#F5F5F5",
             padding: 4,
             justifyContent: "center",

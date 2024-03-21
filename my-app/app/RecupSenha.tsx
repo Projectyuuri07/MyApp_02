@@ -2,10 +2,11 @@ import { View, StyleSheet, Text } from 'react-native';
 import Status from '../components/StatusBar';
 import Inputs from '../components/Input';
 import Botao from '../components/Button';
+import { Link } from 'expo-router';
 
 const RecupSenha = () => {
     const BotaoPress = () => {
-        alert('E-mail enviado com sucesso! Aguarde para a recuparação da senha!');
+        alert('E-mail enviado com sucesso! Aguarde para a recuperação da senha!');
     };
     
     return (
@@ -18,8 +19,10 @@ const RecupSenha = () => {
                 <Text style={styles.texto}>Insira seu e-mail para recuperar a senha!</Text>
                 
                 <Inputs placeholder="insira seu email:" title="E-mail:"/>
-        
-                <Botao label="Cadastre-se" onPress={BotaoPress} />
+                
+                <Link href="//index" asChild>
+                    <Botao label="Cadastre-se" onPress={BotaoPress} />
+                </Link>
         
             </View>
     

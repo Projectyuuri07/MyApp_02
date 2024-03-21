@@ -4,6 +4,7 @@ import PatriBar from "../components/PatrimonioBar";
 import Itens from "../components/Itens";
 import Footbar from "../components/Footer";
 import { Feather, Octicons, AntDesign } from '@expo/vector-icons';
+import { Link } from "expo-router";
 
 const Patrimonio = () => {
 
@@ -45,7 +46,9 @@ const Patrimonio = () => {
             </ScrollView>
 
             <View style={styles.addButtonContainer}>
-                <AntDesign name="pluscircle" size={50} color="red"  />
+                <Link href="/Additens" asChild>
+                    <AntDesign name="pluscircle" size={50} color="red"  />
+                </Link>
             </View>
 
             <Footbar color="red" ColorIcon="white" margem={0} />

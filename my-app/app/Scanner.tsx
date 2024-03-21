@@ -3,6 +3,7 @@ import { View, StyleSheet, TouchableOpacity, Text} from "react-native";
 import PatriBar from "../components/PatrimonioBar";
 import {AntDesign, MaterialIcons, Ionicons  } from '@expo/vector-icons';
 import Footbar from "../components/Footer";
+import { Link } from "expo-router";
 
 
 const Descricao = () => {
@@ -11,7 +12,9 @@ const Descricao = () => {
 
             <PatriBar color="red">
                 <TouchableOpacity>
-                    <AntDesign name="arrowleft" size={24} color="#ffff" />
+                    <Link href="/Patrimonio" >
+                        <AntDesign name="arrowleft" size={24} color="#ffff" />
+                    </Link>
                 </TouchableOpacity>
                     <Text style={styles.text}>Scanner</Text>
                 <TouchableOpacity>

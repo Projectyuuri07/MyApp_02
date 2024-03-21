@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { FontAwesome5, FontAwesome6 } from '@expo/vector-icons';
+import { Link } from 'expo-router';
 
 type Props = {
   color: string;
@@ -23,7 +24,9 @@ export default function Footbar({ color, ColorIcon, margem }: Props){
       });
   return (
     <View style={[styles.display, { backgroundColor: color, borderWidth: margem }]}>
-      <FontAwesome6 name="camera-rotate" size={30} color={ColorIcon} />
+      <Link href="/Scanner" >
+        <FontAwesome6 name="camera-rotate" size={30} color={ColorIcon} />
+      </Link>
       <FontAwesome5 name="list-ol" size={30} color={ColorIcon} />
     </View>
   );

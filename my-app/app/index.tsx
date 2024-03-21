@@ -2,19 +2,13 @@ import { View, StyleSheet, Text } from 'react-native';
 import Status from '../components/StatusBar';
 import Inputs from '../components/Input';
 import Botao from '../components/Button';
+import { Link } from 'expo-router';
 
 const Login = () => {
-    const BotaoPress = () => {
+    const Entrar = () => {
         alert('Login realizado com sucesso!');
     };
 
-    const cadastreSe = () => {
-        alert('Página indisponível no momento! Tente mais tarde!');
-    }
-
-    const esqueceuSenha = () => {
-        alert('Página indisponível no momento! Desculpe pelo transtorno!');
-    }
     
     return (
         <View style={styles.container}>
@@ -28,17 +22,20 @@ const Login = () => {
                 <Inputs placeholder="Insira seu email:" title="E-mail:"/>
                 
                 <Inputs placeholder="Insira sua senha:" secureTextEntry title="Senha:"/>
-        
-                <Botao label="Cadastre-se" onPress={BotaoPress} />
+
+                <Link href="/Patrimonio" asChild>
+                    <Botao label="Entrar" onPress={Entrar} />
+                </Link>
 
                 <View style={styles.linksContainer}>
-                    <Text style={styles.linkText} onPress={cadastreSe}>
-                        Cadastre-se
-                    </Text>
+                    <Link href="/Cadastro" asChild>
+                        <Text style={styles.linkText} >Cadastre-se</Text>
+                    </Link>
 
-                    <Text style={styles.linkText} onPress={esqueceuSenha}>
-                        Esqueceu a senha?
-                    </Text>
+                    <Link href="/RecupSenha" asChild>
+                        <Text style={styles.linkText} >Esqueceu a senha?</Text>
+                    </Link>
+                    
                 </View>
         
             </View>

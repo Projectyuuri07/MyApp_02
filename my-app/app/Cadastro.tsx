@@ -3,9 +3,10 @@ import { View, StyleSheet, ScrollView} from 'react-native';
 import Status from '../components/StatusBar';
 import Inputs from '../components/Input';
 import Botao from '../components/Button';
+import { Link } from 'expo-router';
 
 const Cadastro = () => {
-  const BotaoPress = () => {
+  const Cadastrado = () => {
     alert('Cadastro realizado com sucesso!');
   };
 
@@ -28,7 +29,9 @@ const Cadastro = () => {
 
         <Inputs placeholder="insira sua senha novamente:" secureTextEntry title="Confirmar senha:"/>
 
-        <Botao label="Cadastre-se" onPress={BotaoPress} />
+        <Link href="//index" asChild>
+          <Botao label="Cadastre-se" onPress={Cadastrado} />
+        </Link>
 
       </ScrollView>
 
@@ -53,6 +56,7 @@ const styles = StyleSheet.create({
     flex: 1,
     width: '100%',
     padding: 10,
+    
   },
 });
 

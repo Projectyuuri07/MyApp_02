@@ -6,7 +6,7 @@ import Footbar from "../components/Footer";
 import { Link } from "expo-router";
 
 
-const Descricao = () => {
+const Scanner = () => {
     return(
         <View style={styles.container}>
 
@@ -56,4 +56,4 @@ const styles = StyleSheet.create({
     
 });
 
-export default Descricao;
+export default Scanner;

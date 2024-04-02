@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, StyleSheet, ScrollView} from 'react-native';
-import Status from '../../components/StatusBar';
-import Inputs from '../../components/Input';
-import Botao from '../../components/Button';
+import Status from '@components/StatusBar';
+import Inputs from '@components/Input';
+import Botao from '@components/Button';
 import { Link } from 'expo-router';
 
 const Cadastro = () => {

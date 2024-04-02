@@ -1,8 +1,8 @@
 import { View, StyleSheet, Text } from 'react-native';
-import Status from '../../components/StatusBar';
-import Inputs from '../../components/Input';
+import Status from '@components/StatusBar';
+import Inputs from '@components/Input';
 import { Link } from 'expo-router';
-import LinkBtn from '../../components/Linkbtn';
+import LinkBtn from '@components/Linkbtn';
 
 const Login = () => {
     

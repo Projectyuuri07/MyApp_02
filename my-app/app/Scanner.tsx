@@ -2,8 +2,8 @@ import React from "react";
 import { View, StyleSheet, TouchableOpacity, Text} from "react-native";
 import {AntDesign, MaterialIcons, Ionicons  } from '@expo/vector-icons';
 import { Link } from "expo-router";
-import PatriBar from "../components/PatrimonioBar";
-import Footbar from "../components/Footer";
+import PatriBar from "@components/PatrimonioBar";
+import Footbar from "@components/Footer";
 
 
 

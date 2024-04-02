@@ -2,9 +2,9 @@ import React from "react";
 import { View, StyleSheet, ScrollView, TouchableOpacity, Text} from "react-native";
 import { Feather, Octicons, AntDesign } from '@expo/vector-icons';
 import { Link } from "expo-router";
-import PatriBar from "../components/PatrimonioBar";
-import Itens from "../components/Itens";
-import Footbar from "../components/Footer";
+import PatriBar from "@components/PatrimonioBar";
+import Itens from "@components/Itens";
+import Footbar from "@components/Footer";
 
 const Patrimonio = () => {
 

@@ -1,7 +1,7 @@
 import { View, StyleSheet, Text } from 'react-native';
-import Status from '../components/StatusBar';
-import Inputs from '../components/Input';
-import Botao from '../components/Button';
+import Status from '../../components/StatusBar';
+import Inputs from '../../components/Input';
+import Botao from '../../components/Button';
 import { Link } from 'expo-router';
 
 const RecupSenha = () => {

@@ -1,9 +1,10 @@
 import React from "react";
 import { View, StyleSheet, TouchableOpacity, Text} from "react-native";
-import PatriBar from "../components/PatrimonioBar";
 import {AntDesign, MaterialIcons, Ionicons  } from '@expo/vector-icons';
-import Footbar from "../components/Footer";
 import { Link } from "expo-router";
+import PatriBar from "../components/PatrimonioBar";
+import Footbar from "../components/Footer";
+
 
 
 const Scanner = () => {

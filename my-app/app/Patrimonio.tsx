@@ -1,10 +1,10 @@
 import React from "react";
 import { View, StyleSheet, ScrollView, TouchableOpacity, Text} from "react-native";
+import { Feather, Octicons, AntDesign } from '@expo/vector-icons';
+import { Link } from "expo-router";
 import PatriBar from "../components/PatrimonioBar";
 import Itens from "../components/Itens";
 import Footbar from "../components/Footer";
-import { Feather, Octicons, AntDesign } from '@expo/vector-icons';
-import { Link } from "expo-router";
 
 const Patrimonio = () => {
 
@@ -53,6 +53,7 @@ const Patrimonio = () => {
 
             <Footbar color="red" ColorIcon="white" margem={0} />
 
+
         </View>
     );
 }
@@ -77,3 +78,4 @@ const styles = StyleSheet.create({
 });
     
 export default Patrimonio;
+

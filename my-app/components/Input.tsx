@@ -10,6 +10,7 @@ export default function Input({ title, ...props }: InputProps) {
     const styles = StyleSheet.create({
         container: {
             margin: 8,
+            
         },
         input: {
             height: 38,
@@ -31,7 +32,7 @@ export default function Input({ title, ...props }: InputProps) {
     return (
         <View style={styles.container}>
             <Text style={styles.textoinp}>{title}</Text>
-            <TextInput {...props} style={styles.input} placeholderTextColor="#808080" onFocus={() => {setHover("#F39200");}} onBlur={() => {setHover("#F5F5F5");}} />
+            <TextInput {...props} style={styles.input} placeholderTextColor="#808080" onFocus={() => {setHover("#F39200");}} onBlur={() => {setHover("#f5f5f5");}} />
         </View>
     );
 }

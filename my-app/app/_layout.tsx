@@ -23,7 +23,13 @@ export default function layout() {
         statusBarColor: "red",
         headerTintColor: "#fff",
         headerTransparent: true }} />
+
+    {/* Esta e a Tela de TabNav */}
+      <Stack.Screen name="TabNav" options={{
+        headerShown: false, 
+      }} />
     </Stack>
+    
   )
 }
 

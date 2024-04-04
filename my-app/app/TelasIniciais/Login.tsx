@@ -19,7 +19,7 @@ const Login = () => {
                 
                 <Inputs placeholder="Insira sua senha:" secureTextEntry title="Senha:"/>
                 
-                <LinkBtn title="Entrar" href="TabMenu" />
+                <LinkBtn title="Entrar" href="TabNav" />
 
                 <View style={styles.linksContainer}>
                     <Link href="TelasIniciais/RecupSenha" asChild>
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         width: '100%',
-        padding: 9,
+        padding: 10,
         fontSize: 20,
     },
     linkText: {

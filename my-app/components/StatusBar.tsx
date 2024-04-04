@@ -25,7 +25,7 @@ export default function Status ({ title }: Props){
   
   return (
     <View style={styles.container}>
-      <Image source={require('../assets/Logo.png')} style={styles.image} />
+      <Image source={require('@assets/Logo.png')} style={styles.image} />
       <StatusBar style="light" backgroundColor="#333" />
       <Text style={styles.texto}>{title}</Text>
     </View>

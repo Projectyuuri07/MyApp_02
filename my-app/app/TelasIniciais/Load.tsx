@@ -2,10 +2,15 @@ import React from 'react';
 import { View, StyleSheet} from 'react-native';
 import Status from '@components/StatusBar';
 import { ActivityIndicator } from 'react-native';
+import { useColor } from '../../temas/temas';
 
 const Load = () => {
+  const cores = useColor();
+
+  console.log(cores);
+
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, {backgroundColor: cores.bgSecondary}]}>
       <Status title={''} />
       <ActivityIndicator size={60} color="#ffff" style={styles.circle}  />
 
@@ -17,7 +22,6 @@ const Load = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'red',
     alignItems: 'center',
     justifyContent: 'center',
   },

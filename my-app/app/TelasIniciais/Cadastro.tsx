@@ -4,20 +4,25 @@ import Status from '@components/StatusBar';
 import Inputs from '@components/Input';
 import Botao from '@components/Button';
 import { Link } from 'expo-router';
+import { useColor } from '../../temas/temas';
 
 const Cadastro = () => {
   const Cadastrado = () => {
     alert('Cadastro realizado com sucesso!');
   };
 
+  const cores = useColor();
+
+  console.log(cores);
+
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, {backgroundColor: cores.bgSecondary}]}>
 
       <Status title="Cadastre-se" />
 
       <ScrollView contentContainerStyle={styles.cadastro}>
 
-        <View style={styles.inputs}>
+        <View style={[styles.inputs, {backgroundColor: cores.bgPrimary}]}>
           <Inputs placeholder="Insira seu nome" title="Nome:"/>
 
           <Inputs placeholder="Insira seu sobrenome" title="Sobrenome:" />
@@ -45,7 +50,6 @@ const Cadastro = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'red',
     justifyContent: 'center',
   },
   cadastro: {
@@ -53,7 +57,6 @@ const styles = StyleSheet.create({
   },
   inputs: {
     alignItems: 'center',
-    backgroundColor: '#ffffff',
     paddingHorizontal: 20,
     paddingBottom: 20,
     height: '100%',

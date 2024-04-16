@@ -8,8 +8,6 @@ const Patrimonio = () => {
 
     return(
         <View style={styles.container}>
-
-
             <ScrollView>
                 <Itens id={956389} item={'CADEIRA SENAI'} />
                 <Itens id={956389} item={'CADEIRA SENAI'} />

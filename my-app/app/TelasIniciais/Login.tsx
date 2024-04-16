@@ -1,3 +1,4 @@
+import React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 import Status from '@components/StatusBar';
 import Inputs from '@components/Input';
@@ -5,27 +6,23 @@ import { Link } from 'expo-router';
 import LinkBtn from '@components/Linkbtn';
 import { useColor } from '../../temas/temas';
 
-/*Arrume depois */
-
 const Login = () => {
     const cores = useColor();
 
-    console.log(cores);
-    
     return (
-            <View style={[styles.container, {backgroundColor: cores.bgSecondary}]}>
+        <View style={[styles.container, { backgroundColor: cores.bgSecondary }]}>
             <Status title="Login" />
             <View style={[styles.cadastro, { backgroundColor: cores.bgPrimary }]}>
-                <Text style={[styles.texto, {color: cores.textColorPrimary}]}>Faça Login para Acessar o Sistema!</Text>
+                <Text style={[styles.texto, { color: cores.textColorPrimary }]}>Faça Login para Acessar o Sistema!</Text>
                 <Inputs placeholder="Insira seu email:" title="E-mail:"/>
-                <Inputs placeholder="Insira sua senha:" secureTextEntry title="Senha:"/>
+                <Inputs placeholder="Insira sua senha:" secureTextEntry title="Senha:" />
                 <LinkBtn title="Entrar" href="TabNav" />
                 <View style={styles.linksContainer}>
                     <Link href="TelasIniciais/RecupSenha" asChild>
-                        <Text style={styles.linkText}>Esqueceu a senha?</Text>
+                        <Text style={[styles.linkText, { color: cores.bginfo }]}>Esqueceu a senha?</Text>
                     </Link>
                     <Link href="TelasIniciais/Cadastro" asChild>
-                        <Text style={styles.linkText}>Cadastre-se</Text>
+                        <Text style={[styles.linkText, { color: cores.bginfo }]}>Cadastre-se</Text>
                     </Link>
                 </View>
             </View>
@@ -57,7 +54,6 @@ const styles = StyleSheet.create({
         padding: 10,
     },
     linkText: {
-        color: '#011E83',
         fontSize: 15,
     },
 });

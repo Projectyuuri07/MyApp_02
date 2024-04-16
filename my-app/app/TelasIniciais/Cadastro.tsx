@@ -17,9 +17,7 @@ const Cadastro = () => {
 
   return (
     <View style={[styles.container, {backgroundColor: cores.bgSecondary}]}>
-
-      <Status title="Cadastre-se" />
-
+      <Status title="Cadastre-se"/>
       <ScrollView contentContainerStyle={styles.cadastro}>
 
         <View style={[styles.inputs, {backgroundColor: cores.bgPrimary}]}>
@@ -38,11 +36,8 @@ const Cadastro = () => {
           <Link href="//index" asChild>
             <Botao label="Cadastre-se" onPress={Cadastrado} />
           </Link>
-
         </View>
-
       </ScrollView>
-
     </View>
   );
 };

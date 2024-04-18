@@ -3,6 +3,7 @@ import { View, StyleSheet} from "react-native";
 import InputinventoryInput from "@components/Inputitens";
 
 const AddIten = () => {
+
     return(
         <View style={styles.container}>
             <View style={styles.inputContainer}>

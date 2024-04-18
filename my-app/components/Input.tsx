@@ -10,7 +10,7 @@ export default function Input({ title, ...props }: InputProps) {
     const cores = useColor();
 
 
-    const [hover, setHover] = useState("F5F5F5");
+    const [hover, setHover] = useState("f5f5f5");
     const styles = StyleSheet.create({
         container: {
             margin: 8,

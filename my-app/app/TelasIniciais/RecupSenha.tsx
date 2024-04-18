@@ -5,14 +5,8 @@ import { useColor } from '../../temas/temas';
 import LinkBtn from '@components/Linkbtn';
 
 const RecupSenha = () => {
-    const BotaoPress = () => {
-        alert('E-mail enviado com sucesso! Aguarde para a recuperação da senha!');
-    };
-
     const cores = useColor();
 
-    console.log(cores);
-    
     return (
         <View style={[styles.container, {backgroundColor: cores.bgSecondary}]}>
             <Status title="Recuperação de senha" />

@@ -13,7 +13,7 @@ const Scanner = () => {
         return null;
 
     if (!permission.granted)
-        return 
+        return null;
 
 
     return(

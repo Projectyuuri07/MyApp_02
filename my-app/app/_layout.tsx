@@ -1,4 +1,3 @@
-import {View, Text} from "react-native";
 import { Stack } from "expo-router";
 
 export default function layout() {
@@ -12,7 +11,7 @@ export default function layout() {
       
     {/* Esta e a Tela de Recuperação de Senha */}
       <Stack.Screen name="TelasIniciais/RecupSenha" options={{
-        headerTitle: "" , 
+        headerTitle: "" ,
         statusBarColor: "#011E83",
         headerTintColor: "#fff", 
         headerTransparent: true }} />

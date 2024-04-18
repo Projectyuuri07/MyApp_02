@@ -25,12 +25,6 @@ const Patrimonio = () => {
                 <Itens id={956389} item={'CADEIRA SENAI'} />
                 <Itens id={956389} item={'CADEIRA SENAI'} />
                 <Itens id={956389} item={'CADEIRA SENAI'} />
-                <Itens id={956389} item={'CADEIRA SENAI'} />
-                <Itens id={956389} item={'CADEIRA SENAI'} />
-                <Itens id={956389} item={'CADEIRA SENAI'} />
-                <Itens id={956389} item={'CADEIRA SENAI'} />
-                <Itens id={956389} item={'CADEIRA SENAI'} />
-                <Itens id={956389} item={'CADEIRA SENAI'} />
             </ScrollView>
 
             <View style={styles.addButtonContainer}>
@@ -57,7 +51,7 @@ const styles = StyleSheet.create({
         margin: 20,
     },
     text: {
-        color: "#000",
+        color: "#0000",
         fontSize: 16,
     }, 
 });

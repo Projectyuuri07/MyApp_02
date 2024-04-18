@@ -7,8 +7,6 @@ import { useColor } from '../../temas/temas';
 const Load = () => {
   const cores = useColor();
 
-  console.log(cores);
-
   return (
     <View style={[styles.container, {backgroundColor: cores.bgSecondary}]}>
       <Status title={''} />

@@ -3,11 +3,13 @@ import { View, StyleSheet, ScrollView } from "react-native";
 import { AntDesign } from '@expo/vector-icons';
 import { Link } from "expo-router";
 import Itens from "@components/Itens";
+import { useColor } from "../../../../temas/temas";
 
 const Patrimonio = () => {
+    const cores = useColor();
 
     return(
-        <View style={styles.container}>
+        <View style={[styles.container, {backgroundColor:cores.bgPrimary}]}>
             <ScrollView>
                 <Itens id={956389} item={'CADEIRA SENAI'} />
                 <Itens id={956389} item={'CADEIRA SENAI'} />
@@ -29,7 +31,6 @@ const Patrimonio = () => {
                 <Itens id={956389} item={'CADEIRA SENAI'} />
                 <Itens id={956389} item={'CADEIRA SENAI'} />
                 <Itens id={956389} item={'CADEIRA SENAI'} />
-
             </ScrollView>
 
             <View style={styles.addButtonContainer}>

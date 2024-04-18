@@ -1,5 +1,4 @@
 import { Drawer } from "expo-router/drawer";
-import { View } from "react-native"
 import CustomDrawer from "@components/customDrawer";
 import { MaterialIcons } from "@expo/vector-icons";
 

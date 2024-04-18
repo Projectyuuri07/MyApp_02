@@ -1,40 +1,21 @@
 import React from "react";
-import { View, StyleSheet, TouchableOpacity, Text} from "react-native";
-import PatriBar from "@components/PatrimonioBar";
-import {AntDesign, MaterialCommunityIcons } from '@expo/vector-icons';
-import Footbar from "@components/Footer";
+import { View, StyleSheet, Text} from "react-native";
+import {MaterialCommunityIcons } from '@expo/vector-icons';
 import { Link } from "expo-router";
 
 
 const Descricao = () => {
     return(
         <View style={styles.container}>
-
-            <PatriBar color="red">
-                <TouchableOpacity>
-                    <Link href="/Patrimonio" asChild>
-                        <AntDesign name="arrowleft" size={24} color="#ffff" />
-                    </Link>
-                </TouchableOpacity>
-                    <Text style={styles.text}>Descrição de Itens</Text>
-                <TouchableOpacity>
-                    <AntDesign name="pluscircleo" size={24} color="#ffff" />
-                </TouchableOpacity>
-            </PatriBar>
-
             <View style={styles.corpo}>
                 <Text style={styles.titulo}>N° do Inventario:</Text>
                 <Text style={styles.item}> 957689 </Text>
-
                 <Text style={styles.titulo}>Descrição:</Text>
                 <Text style={styles.item}> CADEIRA GIRATÓRIA </Text>
-
                 <Text style={styles.titulo}>Local:</Text>
                 <Text style={styles.item}> SALA C13 </Text>
-
                 <Text style={styles.titulo}>Responsável:</Text>
                 <Text style={styles.item}> CARLOS </Text>
-
                 <Text style={styles.titulo}>Data de Registro:</Text>
                 <Text style={styles.item}> 05/03/2024 </Text>
             </View>
@@ -44,9 +25,6 @@ const Descricao = () => {
                     <MaterialCommunityIcons name="pencil-circle" size={60} color="red" />
                 </Link>
             </View>
-
-            <Footbar color="white" ColorIcon="#595959" margem={1} />
-
         </View>
     );
 };

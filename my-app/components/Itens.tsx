@@ -1,6 +1,7 @@
 import { Link } from "expo-router";
 import React from "react";
 import {Text, View, StyleSheet } from "react-native";
+import { useColor } from "../temas/temas";
 
 type Props = {
     id: number,
@@ -8,16 +9,18 @@ type Props = {
 };
 
 export default function Itens({id, item }: Props){
+    const cores = useColor();
+
     const styles = StyleSheet.create({
         display: {
             borderBottomColor: '#f5f5f5',
-            borderBottomWidth: 2,
+            borderBottomWidth: 1,
             gap: 10,
         },
         text : {
             fontSize: 20,
             fontWeight: '500',
-            color: 'black',
+            color:  cores.textColorPrimary,
             alignContent: 'center',
             marginLeft: 25,
             marginTop: 20,
@@ -27,7 +30,7 @@ export default function Itens({id, item }: Props){
         item: {
             fontSize: 15,
             fontWeight: '500',
-            color: 'lightgray',
+            color: cores.textColorPrimary,
             alignContent: 'center',
             marginLeft: 25,
             marginBottom: 20,

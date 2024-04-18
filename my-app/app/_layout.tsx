@@ -24,6 +24,13 @@ export default function layout() {
         headerTintColor: "#fff",
         headerTransparent: true }} />
 
+    {/* Esta e a Tela de Login */}
+    <Stack.Screen name="TelasIniciais/Login" options={{
+        headerTitle: "" , 
+        statusBarColor: "red",
+        headerTintColor: "#fff",
+        headerTransparent: true }} />
+
     {/* Esta e a Tela de TabNav */}
       <Stack.Screen name="TabNav" options={{
         headerShown: false, 

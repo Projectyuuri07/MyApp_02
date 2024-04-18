@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
+import { Link } from 'expo-router';
 import Status from '@components/StatusBar';
 import Inputs from '@components/Input';
-import { Link } from 'expo-router';
 import LinkBtn from '@components/Linkbtn';
 import { useColor } from '../../temas/temas';
 
@@ -14,15 +14,15 @@ const Login = () => {
             <Status title="Login" />
             <View style={[styles.cadastro, { backgroundColor: cores.bgPrimary }]}>
                 <Text style={[styles.texto, { color: cores.textColorPrimary }]}>Faça Login para Acessar o Sistema!</Text>
-                <Inputs placeholder="Insira seu email:" title="E-mail:"/>
+                <Inputs placeholder="Insira seu email:" title="E-mail:" />
                 <Inputs placeholder="Insira sua senha:" secureTextEntry title="Senha:" />
                 <LinkBtn title="Entrar" href="TabNav" />
                 <View style={styles.linksContainer}>
-                    <Link href="TelasIniciais/RecupSenha" asChild>
-                        <Text style={[styles.linkText, { color: cores.bginfo }]}>Esqueceu a senha?</Text>
+                    <Link href="TelasIniciais/RecupSenha" style={{ color: cores.bginfo }} asChild>
+                        <Text style={styles.linkText}>Esqueceu a senha?</Text>
                     </Link>
-                    <Link href="TelasIniciais/Cadastro" asChild>
-                        <Text style={[styles.linkText, { color: cores.bginfo }]}>Cadastre-se</Text>
+                    <Link href="TelasIniciais/Cadastro" style={{ color: cores.bginfo }} asChild>
+                        <Text style={styles.linkText}>Cadastre-se</Text>
                     </Link>
                 </View>
             </View>

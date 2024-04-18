@@ -1,9 +1,8 @@
 import { View, StyleSheet, Text } from 'react-native';
 import Status from '@components/StatusBar';
 import Inputs from '@components/Input';
-import Botao from '@components/Button';
-import { Link } from 'expo-router';
 import { useColor } from '../../temas/temas';
+import LinkBtn from '@components/Linkbtn';
 
 const RecupSenha = () => {
     const BotaoPress = () => {
@@ -15,7 +14,7 @@ const RecupSenha = () => {
     console.log(cores);
     
     return (
-        <View style={[styles.container, {backgroundColor: cores.bginfo}]}>
+        <View style={[styles.container, {backgroundColor: cores.bgSecondary}]}>
     
             <Status title="Recuperação de senha" />
     
@@ -25,10 +24,8 @@ const RecupSenha = () => {
                 
                 <Inputs placeholder="insira seu email:" title="E-mail:"/>
                 
-                <Link href="//index" asChild>
-                    <Botao label="Cadastre-se" onPress={BotaoPress} />
-                </Link>
-        
+                <LinkBtn title="Entrar" href="TelasIniciais/Login" />
+
             </View>
     
         </View>

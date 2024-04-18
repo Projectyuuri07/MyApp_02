@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { View, StyleSheet, TouchableOpacity} from "react-native";
 import {MaterialIcons} from '@expo/vector-icons';
-import { Camera, CameraOrientation, CameraType } from "expo-camera";
+import { Camera, CameraType } from "expo-camera";
 
 
 const Scanner = () => {

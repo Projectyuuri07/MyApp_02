@@ -38,7 +38,7 @@ export default function Itens({id, item }: Props){
     });
     return(
         <View style={styles.display}>
-            <Link href="/DescricaoIten" asChild>
+            <Link href="/TabNav/DrawerNav/Home/DescricaoIten" asChild>
                 <Text style={styles.text}>{id}</Text>
             </Link>
                 <Text style={styles.item}>{item}</Text>

@@ -1,8 +1,9 @@
 import { DrawerItemList } from '@react-navigation/drawer';
 import {View, Text} from 'react-native';
-import { FontAwesome5 } from '@expo/vector-icons';
 import { StyleSheet } from 'react-native';
 import { useColor } from '../temas/temas';
+import React from 'react';
+import { Image } from 'react-native';
 
 export default function CustomDrawer(props: any){
     const cores = useColor();
@@ -41,7 +42,7 @@ export default function CustomDrawer(props: any){
     return (
         <View style={[styles.container, {backgroundColor: cores.bgPrimary}]}>
             <View style={[styles.caixa, {backgroundColor: cores.bgPrimary}]}>
-                <FontAwesome5 name="user-circle" size={80} color={cores.textColorPrimaryVariant} />
+                <Image source={require('../assets/user.jpg')} style={{width: 80, height: 80, borderRadius: 70}}/>
                 <View style={styles.infoUser}>
                     <Text style={styles.titulo}>Flávio Josefo</Text>
                     <Text style={styles.texto}>flavio@email.com</Text>

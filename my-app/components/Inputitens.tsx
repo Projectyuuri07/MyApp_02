@@ -15,7 +15,7 @@ export default function InventoryInput({label, ...props}: InventoryInputProps) {
             marginBottom: 10,
             paddingTop: 15,
             position: 'relative',
-            
+            backgroundColor: cores.bgPrimary,
         },
         label: {
             position: 'absolute',
@@ -35,6 +35,7 @@ export default function InventoryInput({label, ...props}: InventoryInputProps) {
             width: '90%',
             borderWidth: 1,
             borderColor: hover,
+            color: cores.textColorPrimary,
         },
         text: {
             color: 'red',
@@ -42,7 +43,7 @@ export default function InventoryInput({label, ...props}: InventoryInputProps) {
     });
     return (
         <View style={styles.inventoryInput}>
-            <TextInput {...props} style={styles.input} onFocus={() =>{setHover(cores.bgHover);}} onBlur={() =>{setHover(cores.textColorPrimary);}} />
+            <TextInput {...props} style={styles.input} onFocus={() =>{setHover(cores.bgHover);}} onBlur={() =>{setHover(cores.textColorPrimary);}} placeholderTextColor={cores.textColorPrimary} />
             <Text style={styles.label}>{label}<Text style={styles.text}> * </Text></Text>
         </View>
     );

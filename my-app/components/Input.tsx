@@ -9,12 +9,10 @@ interface InputProps extends TextInputProps {
 export default function Input({ title, ...props }: InputProps) {
     const cores = useColor();
 
-
     const [hover, setHover] = useState(cores.textColorPrimaryVariant);
     const styles = StyleSheet.create({
         container: {
             margin: 8,
-            
         },
         input: {
             height: 38,
@@ -24,18 +22,20 @@ export default function Input({ title, ...props }: InputProps) {
             borderWidth: 1,
             borderColor: hover,
             backgroundColor: cores.bgPrimaryVariant,
+            color: cores.textColorPrimary, 
         },
         textoinp: {
             fontSize: 15,
             fontWeight: 'bold',
             margin: 5,
+            color: cores.textColorPrimaryVariant
         },
     });
 
     return (
         <View style={styles.container}>
-            <Text style={[styles.textoinp, {color: cores.textColorPrimaryVariant}]}>{title}</Text>
-            <TextInput {...props} style={styles.input} placeholderTextColor={cores.textColorPrimaryVariant} onFocus={() => {setHover(cores.bgHover);}} onBlur={() => {setHover(cores.textColorPrimaryVariant);}} />
+            <Text style={styles.textoinp}>{title}</Text>
+            <TextInput {...props} style={styles.input} placeholderTextColor={cores.textColorPrimary} onFocus={() => {setHover(cores.bgHover);}} onBlur={() => {setHover(cores.textColorPrimaryVariant);}} />
         </View>
     );
 }

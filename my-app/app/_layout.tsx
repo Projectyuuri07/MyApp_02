@@ -11,34 +11,34 @@ export default function layout() {
 
     {/* Esta e a Tela index */}
       <Stack.Screen name="index" options={{
-        headerShown: false, 
-        statusBarColor: "black" }} />
+        headerShown: false,
+        statusBarColor: cores.bgQuaternary }} />
       
     {/* Esta e a Tela de Recuperação de Senha */}
       <Stack.Screen name="TelasIniciais/RecupSenha" options={{
         headerTitle: "" ,
-        statusBarColor: "#011E83",
-        headerTintColor: "#fff", 
+        statusBarColor: cores.bgTertiary,
+        headerTintColor: cores.textColorPrimary, 
         headerTransparent: true }} />
 
     {/* Esta e a Tela de Cadastro */}
       <Stack.Screen name="TelasIniciais/Cadastro" options={{
         headerTitle: "" , 
-        statusBarColor: "red",
-        headerTintColor: "#fff",
+        statusBarColor: cores.bgSecondary,
+        headerTintColor: cores.textColorPrimary,
         headerTransparent: true }} />
 
     {/* Esta e a Tela de Login */}
     <Stack.Screen name="TelasIniciais/Login" options={{
         headerTitle: "" , 
-        statusBarColor: "red",
-        headerTintColor: "#fff",
+        statusBarColor: cores.bgQuaternary,
+        headerTintColor: cores.textColorPrimary,
         headerTransparent: true }} />
 
     {/* Esta e a Tela de TabNav */}
-      <Stack.Screen name="TabNav" options={{
+    <Stack.Screen name="TabNav" options={{
         headerShown: false, 
-      }} />
+    }} />
 
 
     </Stack>

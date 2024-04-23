@@ -16,7 +16,7 @@ export default function layout() {
                     headerSearchBarOptions: { placeholder: "Pesquisar" },
                     headerStyle: { backgroundColor: cores.bgPatrimonio },
                     headerTitleAlign: 'center',
-                    headerTintColor: cores.textColorSecondary,
+                    headerTintColor: cores.textColorSecondary
                 }}
             />
 

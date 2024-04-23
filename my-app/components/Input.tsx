@@ -10,7 +10,7 @@ export default function Input({ title, ...props }: InputProps) {
     const cores = useColor();
 
 
-    const [hover, setHover] = useState("f5f5f5");
+    const [hover, setHover] = useState(cores.textColorPrimaryVariant);
     const styles = StyleSheet.create({
         container: {
             margin: 8,
@@ -23,6 +23,7 @@ export default function Input({ title, ...props }: InputProps) {
             padding: 10,
             borderWidth: 1,
             borderColor: hover,
+            backgroundColor: cores.bgPrimaryVariant,
         },
         textoinp: {
             fontSize: 15,
@@ -34,7 +35,7 @@ export default function Input({ title, ...props }: InputProps) {
     return (
         <View style={styles.container}>
             <Text style={[styles.textoinp, {color: cores.textColorPrimaryVariant}]}>{title}</Text>
-            <TextInput {...props} style={[styles.input, {color: cores.bgPrimaryVariant}]} placeholderTextColor="#808080" onFocus={() => {setHover("#F39200");}} onBlur={() => {setHover("#f5f5f5");}} />
+            <TextInput {...props} style={styles.input} placeholderTextColor={cores.textColorPrimaryVariant} onFocus={() => {setHover(cores.bgHover);}} onBlur={() => {setHover(cores.textColorPrimaryVariant);}} />
         </View>
     );
 }

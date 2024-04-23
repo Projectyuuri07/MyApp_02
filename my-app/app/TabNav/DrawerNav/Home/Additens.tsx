@@ -1,11 +1,13 @@
 import React from "react";
 import { View, StyleSheet} from "react-native";
 import InputinventoryInput from "@components/Inputitens";
+import { useColor } from "../../../../temas/temas";
 
 const AddIten = () => {
+    const cores = useColor();
 
     return(
-        <View style={styles.container}>
+        <View style={[styles.container,{backgroundColor: cores.bgPrimary}]}>
             <View style={styles.inputContainer}>
                 <InputinventoryInput label="N° Inventario"/>
                 <InputinventoryInput label="Descrição"/>
@@ -20,11 +22,6 @@ const AddIten = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-    },
-    text: {
-        color: "#ffff",
-        fontSize: 16,
-
     },
     inputContainer: {
         flex: 1,

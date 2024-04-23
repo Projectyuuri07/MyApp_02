@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { View, TextInput, StyleSheet, Text, TextInputProps } from 'react-native';
+import { useColor } from '../temas/temas';
 
 interface InventoryInputProps extends TextInputProps{
     label: string,
 }
 
 export default function InventoryInput({label, ...props}: InventoryInputProps) {
-    const [hover, setHover] = useState("595959");
+    const cores = useColor();
+    const [hover, setHover] = useState(cores.textColorPrimary);
     const styles = StyleSheet.create({
         inventoryInput: {
             marginLeft: 25,
@@ -19,7 +21,7 @@ export default function InventoryInput({label, ...props}: InventoryInputProps) {
             position: 'absolute',
             top: 6, 
             left: 10,
-            backgroundColor: '#fff',
+            backgroundColor: cores.bgPrimary,
             paddingHorizontal: 2,
             fontWeight: 'bold',
             color: hover,
@@ -40,7 +42,7 @@ export default function InventoryInput({label, ...props}: InventoryInputProps) {
     });
     return (
         <View style={styles.inventoryInput}>
-            <TextInput {...props} style={styles.input} onFocus={() =>{setHover("#F39200");}} onBlur={() =>{setHover("#595959");}} />
+            <TextInput {...props} style={styles.input} onFocus={() =>{setHover(cores.bgHover);}} onBlur={() =>{setHover(cores.textColorPrimary);}} />
             <Text style={styles.label}>{label}<Text style={styles.text}> * </Text></Text>
         </View>
     );

@@ -5,13 +5,15 @@ interface cores {
     /* Backgrounds */
     bgPrimary: string
     bgSecondary: string
+    bgTertiary: string
+    bgQuaternary: string
+    bgPatrimonio: string
     bginfo: string
     textColorPrimary: string
     textColorSecondary: string
-    bgPatrimonio: string
 
     /* Input */
-    bgPrimaryVariant?: string
+    bgPrimaryVariant: string
     textColorPrimaryVariant: string
     bgHover: string
 
@@ -21,33 +23,48 @@ interface cores {
 
 
 const light: cores = {
-    bgPrimary: '#ffffff',
+    /* Backgrounds */
+    bgPrimary: '#FFFFFF',
     bgSecondary: '#FF0000',
+    bgTertiary: '#011E83',
+    bgQuaternary: '#101010',
+    bgPatrimonio: '#FF0000',
+
+    /* Texto */
     bginfo: '#011E83',
     textColorPrimary: '#101010',
-    textColorSecondary: '#ffffff',
-    bgPatrimonio: '#ffffff',
+    textColorSecondary: '#FFFFFF',
+
     /* Input */
     bgPrimaryVariant: '#F5F5F5',
     textColorPrimaryVariant: '#595959',
     bgHover: '#F39200',
-    /* Button */ 
+
+    /* Button */
     bgButton: '#101010'
+    
 }
 
 const dark: cores = {
+    /* Backgrounds */
     bgPrimary: '#240707',
     bgSecondary: '#240707',
-    textColorPrimary: '#ffffff',
-    textColorSecondary: '##D9D9D9',
-    bginfo: '#ffffff',
+    bgTertiary: '#240707',
+    bgQuaternary: '#240707',
     bgPatrimonio: '#FF0000',
+
+    /* Texto */
+    bginfo: '#ffffff',
+    textColorPrimary: '#FFFFFF',
+    textColorSecondary: '#D9D9D9',
+
     /* Input */
     bgPrimaryVariant: '#3A2828',
     textColorPrimaryVariant: '#CBCBCB',
     bgHover: '#F39200',
+
     /* Button */
-    bgButton: '#FF0000' 
+    bgButton: '#FF0000'
 }
 
 

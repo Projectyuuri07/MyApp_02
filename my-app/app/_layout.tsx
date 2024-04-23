@@ -1,6 +1,11 @@
 import { Stack } from "expo-router";
+import { useColor } from "../temas/temas";
+import React from "react";
+import { Ionicons } from "@expo/vector-icons";
+
 
 export default function layout() {
+  const cores = useColor();
   return (
     <Stack>
 
@@ -34,7 +39,11 @@ export default function layout() {
       <Stack.Screen name="TabNav" options={{
         headerShown: false, 
       }} />
+
+
     </Stack>
+
+    
     
   )
 }

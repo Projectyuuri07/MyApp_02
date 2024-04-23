@@ -8,7 +8,7 @@ const RecupSenha = () => {
     const cores = useColor();
 
     return (
-        <View style={[styles.container, {backgroundColor: cores.bgSecondary}]}>
+        <View style={[styles.container, {backgroundColor: cores.bgTertiary}]}>
             <Status title="Recuperação de senha" />
             <View style={[styles.cadastro, {backgroundColor: cores.bgPrimary}]}>
                 <Text style={[styles.texto, {color: cores.textColorPrimary}]}>Insira seu e-mail para recuperar a senha!</Text>

@@ -13,7 +13,7 @@ export default function Layout() {
                     <FontAwesome6 name="user-large" size={size} color={color} />
                 )
             }} />
-            
+
         </Drawer>
     );
 }

@@ -1,46 +1,73 @@
-import { Drawer } from "expo-router/drawer";
-import CustomDrawer from "@components/customDrawer";
-import { FontAwesome6 } from "@expo/vector-icons";
-import { DrawerItem } from "@react-navigation/drawer";
+import CustomDrawer from '@components/customDrawer'
+import {Drawer} from 'expo-router/drawer'
+import {MaterialIcons} from '@expo/vector-icons'
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
+import { useColor } from '../../../temas/temas';
+import { opacity } from 'react-native-reanimated/lib/typescript/reanimated2/Colors';
+
 
 export default function Layout() {
+    const cores = useColor()
+
     return (
-        <Drawer  drawerContent={(props) => (
-            <CustomDrawer {...props} />
+        <Drawer drawerContent={(...props) => (
+            CustomDrawer(...props)
         )}>
-            <Drawer.Screen name="Home" options={{
-                headerShown: false, 
-                drawerIcon: ({size, color}) => (
-                    <FontAwesome6 name="user-large" size={size} color={color} />
-                )
-            }} />
-            <DrawerItem
-                label="Sobre o App"
-                icon={({size, color}) => (
-                    <FontAwesome6 name="info-circle" size={size} color={color} />
-                )}
-                onPress={() => {
-                    // Lógica para navegar para a tela "Sobre o App"
+            <Drawer.Screen name='Home'
+                options={{
+                    headerShown: false,
+                    drawerItemStyle: {backgroundColor: cores.bgPrimary},
+                    drawerIcon: ({ size, color }) => (
+                        <MaterialIcons name='home' size={size} color={color} />
+                    )
                 }}
             />
-            <DrawerItem
-                label="Suporte"
-                icon={({size, color}) => (
-                    <FontAwesome6 name="support" size={size} color={color} />
-                )}
-                onPress={() => {
-                    // Lógica para navegar para a tela de "Suporte"
+
+            <Drawer.Screen 
+                name='Perfil'
+                options={{
+                    headerShown: true,
+                    drawerLabelStyle: { color: cores.textColorPrimaryVariant },
+                    drawerIcon: () => (
+                        <MaterialCommunityIcons name="account" size={24} color={cores.textColorPrimaryVariant} />
+                    ) 
                 }}
             />
-            <DrawerItem
-                label="Sair"
-                icon={({size, color}) => (
-                    <FontAwesome6 name="exit" size={size} color={color} />
-                )}
-                onPress={() => {
-                    // Lógica para sair do aplicativo
+
+            <Drawer.Screen 
+                name='Sobre o App'
+                options={{
+                    headerShown: true,
+                    drawerLabelStyle: { color: cores.textColorPrimaryVariant },
+                    drawerIcon: () => (
+                        <Ionicons name="information-circle" size={24} color={cores.textColorPrimaryVariant} />
+                    ) 
                 }}
             />
+
+            <Drawer.Screen 
+                name='Suporte'
+                options={{
+                    headerShown: true,
+                    drawerLabelStyle: { color: cores.textColorPrimaryVariant },
+                    drawerIcon: () => (
+                        <Ionicons name="chatbox-ellipses" size={24} color={cores.textColorPrimaryVariant} />
+                    ) 
+                }}
+            />
+
+            <Drawer.Screen 
+                name='Sair'
+                options={{
+                    headerShown: true,
+                    drawerLabelStyle: { color: cores.textColorPrimaryVariant },
+                    drawerIcon: () => (
+                        <Ionicons name="exit" size={24} color={cores.textColorPrimaryVariant} />
+                    ) 
+                }}
+            />
+
         </Drawer>
     );
 }

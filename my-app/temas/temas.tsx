@@ -11,6 +11,7 @@ interface cores {
     bginfo: string
     textColorPrimary: string
     textColorSecondary: string
+    bglistaPrimary: string
 
     /* Input */
     bgPrimaryVariant: string
@@ -29,6 +30,7 @@ const light: cores = {
     bgTertiary: '#011E83',
     bgQuaternary: '#101010',
     bgPatrimonio: '#FF0000',
+    bglistaPrimary: '#ffffff',
 
     /* Texto */
     bginfo: '#011E83',
@@ -52,6 +54,8 @@ const dark: cores = {
     bgTertiary: '#240707',
     bgQuaternary: '#240707',
     bgPatrimonio: '#FF0000',
+    bglistaPrimary: '#240707',
+    
 
     /* Texto */
     bginfo: '#ffffff',

@@ -12,11 +12,12 @@ export default function layout() {
             <Stack.Screen
                 name="Lista"
                 options={{
-                    headerLeft: () => <DrawerToggleButton />,
-                    headerSearchBarOptions: { placeholder: "Pesquisar" },
-                    headerStyle: { backgroundColor: cores.bgPatrimonio },
+                    headerLeft: () => <DrawerToggleButton tintColor= {cores.textColorPrimaryVariant} />,
+                    headerSearchBarOptions: { placeholder: "Pesquisar", headerIconColor: cores.textColorPrimaryVariant},
+                    headerStyle: { backgroundColor: cores.bglistaPrimary },
                     headerTitleAlign: 'center',
-                    headerTintColor: cores.textColorSecondary
+                    headerTintColor: cores.textColorPrimaryVariant,
+                    
                 }}
             />
 

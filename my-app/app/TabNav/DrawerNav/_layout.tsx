@@ -4,7 +4,6 @@ import {MaterialIcons} from '@expo/vector-icons'
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import { useColor } from '../../../temas/temas';
-import { opacity } from 'react-native-reanimated/lib/typescript/reanimated2/Colors';
 
 
 export default function Layout() {

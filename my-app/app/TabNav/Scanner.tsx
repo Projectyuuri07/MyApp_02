@@ -1,30 +1,35 @@
 import React, { useState } from "react";
-import { View, StyleSheet, TouchableOpacity} from "react-native";
-import {MaterialIcons} from '@expo/vector-icons';
+import { View, StyleSheet, TouchableOpacity, Text } from "react-native";
+import { MaterialIcons } from '@expo/vector-icons';
 import { Camera, CameraType } from "expo-camera";
-
+import { useColor } from "../../temas/temas";
 
 const Scanner = () => {
-    const [type, setType] = useState(CameraType.back);
+    const cores = useColor();
+    const [isCameraActive, setIsCameraActive] = useState(false);
     const [permission, requestPermission] = Camera.useCameraPermissions();
-    const [iconOpacity, setIconOpacity] = useState(1); 
 
     if (!permission)
         return null;
 
     if (!permission.granted)
-        return null;
+        return <View style={styles.container}><Text>Permissão negada</Text></View>;
 
-
-    return(
+    return (
         <View style={styles.container}>
-            <Camera style={styles.camera} type={type}>
-                <View style={styles.buttonContainer}>
-                    <TouchableOpacity style={styles.button}>
-                        <MaterialIcons name="qr-code-scanner" size={300} color="#5D5C5C" style={{ opacity: iconOpacity }} />
-                    </TouchableOpacity>
-                </View>
-            </Camera>
+            {isCameraActive ? (
+                <Camera style={styles.camera} type={CameraType.back}>
+                    <View style={styles.button}>
+                        <TouchableOpacity style={styles.button} onPress={() => setIsCameraActive(false)}>
+                            <MaterialIcons name="qr-code-scanner" size={300} color={cores.textColorPrimaryVariant}/>
+                        </TouchableOpacity>
+                    </View>
+                </Camera>
+            ) : (
+                <TouchableOpacity style={styles.buttonContainer} onPress={() => setIsCameraActive(true)}>
+                    <MaterialIcons name="qr-code-scanner" size={300} color={cores.textColorPrimaryVariant} />
+                </TouchableOpacity>
+            )}
         </View>
     );
 }
@@ -33,28 +38,21 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
-        alignContent: 'center',
-      },
-    camera: {
-        flex: 1,
-        justifyContent: 'center',
-        alignContent: 'center',
         alignItems: 'center',
-        paddingTop: 240,
+    },
+    camera: {
+        width: '100%',
+        height: '100%',
     },
     buttonContainer: {
         flex: 1,
-        backgroundColor: 'transparent',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     button: {
         flex: 1,
-        alignSelf: 'flex-end',
+        justifyContent: 'center',
         alignItems: 'center',
-    },
-    text: {
-        fontSize: 24,
-        fontWeight: 'bold',
-        color: 'white',
     },
 });
 
